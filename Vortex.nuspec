@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+    <metadata>
+
+        <id>Vortex.Solution.Template</id>
+        <version>1.0.0</version>
+        <title>An ASP.NET Azure Function Template</title>
+        <authors>R3DsKZuLlZx</authors>
+        <description>An ASP.NET Azure Function Template.</description>
+        <summary>An ASP.NET Azure Function Template.</summary>
+
+        <projectUrl>https://github.com/R3DsKZuLlZx/Vortex</projectUrl>
+        <repository type="git" url="https://github.com/R3DsKZuLlZx/Vortex.git" branch="main" />
+        <icon>icon.png</icon>
+        <readme>README.md</readme>
+
+	<license type="file">LICENSE</license>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        
+        <packageTypes>
+            <packageType name="Template" />
+        </packageTypes>
+
+    </metadata>
+
+    <files>
+        <file src=".template.config\icon.png" />
+        <file src="README.md" />
+	<file src="LICENSE" />
+        <file src=".\**" target="content" exclude="**\bin\**;**\obj\**;.\.vs\**;.\.vscode\**;.\.git\**;.\LICENSE;.\README.md;" />
+    </files>
+
+</package>

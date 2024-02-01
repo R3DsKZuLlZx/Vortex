@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "R3DsKZuLlZx",
+  "classifications": ["Azure Functions"],
+  "name": "An ASP.NET Azure Function Template",
+  "description": "An ASP.NET Azure Function Template",
+  "identity": "Vortex.Solution",
+  "shortName": "vtx-sln",
+  "sourceName": "Vortex",
+  "tags": {
+    "language": "c#",
+    "type": "solution"
+  },
+  "preferNameDirectory": true,
+  "sources": [
+    {
+      "exclude": [
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        ".template.config/**/*",
+        "**/*.filelist",
+        "**/*.user",
+        "**/*.lock.json",
+        "**/.idea/**",
+        "**/.git/**"
+      ]
+    }
+  ]
+}
