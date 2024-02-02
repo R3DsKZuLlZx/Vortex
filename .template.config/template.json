@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "R3DsKZuLlZx",
   "classifications": ["Azure Functions"],
-  "name": "An ASP.NET Azure Function Template",
+  "name": "Vortex.Solution.Template",
   "description": "An ASP.NET Azure Function Template",
   "identity": "Vortex.Solution",
   "shortName": "vtx-sln",
@@ -12,6 +12,14 @@
     "type": "solution"
   },
   "preferNameDirectory": true,
+  "symbols": {
+    "UseEfCore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Whether an ef core database template is added."
+    }
+  },
   "sources": [
     {
       "exclude": [
@@ -23,6 +31,17 @@
         "**/*.lock.json",
         "**/.idea/**",
         "**/.git/**"
+      ],
+      "modifiers": [
+        {
+          "condition": "(!UseEfCore)",
+          "exclude": [
+            "VortexDb/**",
+            "ConsoleApp/**",
+            "add-migration.bat",
+            "run-migrations.bat"
+          ]
+        }
       ]
     }
   ]

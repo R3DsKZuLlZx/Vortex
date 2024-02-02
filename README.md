@@ -14,7 +14,7 @@ The easiest way to get started is to install the [.NET template](https://www.nug
 dotnet new install Vortex.Solution.Template::1.0.0
 ```
 
-To create a new solution:
+To create a new solution without an ef core database:
 ```bash
 dotnet new vtx-sln -n YourSolutionName
 ```
@@ -23,6 +23,25 @@ Add the following to the FunctionApp project:
 ```json
 {
   "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated"
+  }
+}
+```
+
+To create a new solution with an ef core database:
+```bash
+dotnet new vtx-sln -n YourSolutionName -ef true
+```
+
+Add the following to the FunctionApp project:
+```json
+{
+  "IsEncrypted": false,
+  "ConnectionStrings": {
+    "YourDbContextName": "YourConnectionString"
+  },
   "Values": {
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated"

@@ -46,4 +46,8 @@
         <Using Include="System.Threading.ExecutionContext" Alias="ExecutionContext"/>
     </ItemGroup>
 
+    <ItemGroup Condition="'$(UseEfCore)' == true">
+      <ProjectReference Include="..\VortexDb\VortexDb.csproj" />
+    </ItemGroup>
+    
 </Project>
